@@ -1,19 +1,25 @@
 package se.kth.iv1350.model;
 
+import se.kth.iv1350.dto.VehicleDTO;
+
 /**
  * Created by Emil on 2017-04-27.
  */
 public class Inspection {
 
+    private VehicleDTO vehicle;
     private int inspectionCost;
     private String inspectionDescription;
+    private boolean passed;
 
     /**
      * This constructor creates a new instance of an Inspection.
      * @param inspectionDescription The description of the inspection
      * @param inspectionCost The cost of the inspection
      */
-    public Inspection(String inspectionDescription, int inspectionCost) {
+    Inspection(String inspectionDescription, int inspectionCost, VehicleDTO vehicle) {
+        this.vehicle = vehicle;
+
         this.inspectionCost = inspectionCost;
         this.inspectionDescription = inspectionDescription;
     }
@@ -29,6 +35,17 @@ public class Inspection {
         return false;
     }
 
+    public VehicleDTO getVehicle() {
+        return vehicle;
+    }
+
+    public boolean isPassed() {
+        return passed;
+    }
+
+    public void setPassed(boolean passed) {
+        this.passed = passed;
+    }
 
     public int getInspectionCost() {
         return inspectionCost;

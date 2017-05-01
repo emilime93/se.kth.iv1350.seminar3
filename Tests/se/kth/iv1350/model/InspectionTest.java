@@ -18,9 +18,9 @@ class InspectionTest {
 
     @BeforeEach
     void setUp() {
-        instance = new Inspection("Brakes", 30);
-        other = new Inspection("Engine", 50);
-        third = new Inspection("brakes", 30);
+        instance = new Inspection("Brakes", 30, null);
+        other = new Inspection("Engine", 50, null);
+        third = new Inspection("brakes", 30, null);
     }
 
     @AfterEach
