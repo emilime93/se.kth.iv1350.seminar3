@@ -1,4 +1,4 @@
-package dto;
+package se.kth.iv1350.dto;
 
 /**
  * Created by Emil on 2017-04-27.
