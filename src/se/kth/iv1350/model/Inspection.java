@@ -17,9 +17,8 @@ public class Inspection {
      * @param inspectionDescription The description of the inspection
      * @param inspectionCost The cost of the inspection
      */
-    Inspection(String inspectionDescription, int inspectionCost, VehicleDTO vehicle) {
+    public Inspection(String inspectionDescription, int inspectionCost, VehicleDTO vehicle) {
         this.vehicle = vehicle;
-
         this.inspectionCost = inspectionCost;
         this.inspectionDescription = inspectionDescription;
     }

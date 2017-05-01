@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87d2498d-5c15-46fe-aa1f-508a80f0cbed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/DatabaseHandler.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java" afterPath="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +33,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Inspection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Inspection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="697">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -48,31 +46,19 @@
       <file leaf-file-name="InspectionList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="14" column="75" lean-forward="true" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+            <state relative-caret-position="373">
+              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InspectionHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InspectionHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InspectionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -80,9 +66,11 @@
       <file leaf-file-name="CarDataBaseHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="433">
+              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,9 +118,11 @@
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.model/InspectionList.java" />
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.model/InspectionHandler.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
       </list>
     </option>
   </component>
@@ -1108,7 +1098,7 @@
       <workItem from="1493284238009" duration="1207000" />
       <workItem from="1493379668304" duration="115000" />
       <workItem from="1493563353108" duration="594000" />
-      <workItem from="1493623510780" duration="8044000" />
+      <workItem from="1493623510780" duration="10120000" />
     </task>
     <task id="LOCAL-00001" summary="First comittment">
       <created>1493206216889</created>
@@ -1187,7 +1177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493644488153</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Another update">
+      <created>1493645182338</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1493645182338</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1223,7 +1220,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15876000" />
+    <option name="totallyTimeSpent" value="17952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1306,7 +1303,8 @@
     <MESSAGE value="First comittment" />
     <MESSAGE value="Second comittment, still testing" />
     <MESSAGE value="Third(not) commit, starting to learn this" />
-    <option name="LAST_COMMIT_MESSAGE" value="Third(not) commit, starting to learn this" />
+    <MESSAGE value="Another update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1633,14 +1631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1649,18 +1639,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java">
+    <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="577">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="433">
+          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1669,16 +1669,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="14" column="75" lean-forward="true" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+        <state relative-caret-position="373">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>

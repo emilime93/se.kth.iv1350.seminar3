@@ -16,14 +16,20 @@ public class InspectionHandler {
     }
 
     public Inspection getNextInspection() {
-        return null;
+        return inspectionList.getNextInspection();
     }
 
     public boolean hasNext() {
-        return false;
+        return inspectionList.hasNext();
     }
 
     public void saveInspectionResult() {
 
     }
+
+    public void setInspectionList(Inspection[] inspectionList) {
+        this.inspectionList.setInspections(inspectionList);
+    }
+
+
 }

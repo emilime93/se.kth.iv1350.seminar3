@@ -20,6 +20,10 @@ public class InspectionList {
         this.currentIndex = 0;
     }
 
+    public void setInspections(Inspection[] inspections) {
+        this.inspections = inspections;
+    }
+
     /**
      * Tests if there are more inspections in the list.
      * @return True if there are more inspections in the list. False otherwise
