@@ -1,45 +1,52 @@
 package se.kth.iv1350.model;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import se.kth.iv1350.dto.VehicleDTO;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 /**
- * Created by Emil on 2017-04-30.
+ * Created by Emil on 2017-05-01.
  */
-
-class InspectionTest {
+public class InspectionTest {
 
     Inspection instance;
     Inspection other;
-    Inspection third;
+    Inspection sameAsInstance;
 
-    @BeforeEach
-    void setUp() {
-        instance = new Inspection("Brakes", 30, null);
-        other = new Inspection("Engine", 50, null);
-        third = new Inspection("brakes", 30, null);
+    @Before
+    public void setUp() {
+        String regNo1 = "ABC 123";
+        String regNo2 = "DEF 456";
+        VehicleDTO vehicle1 = new VehicleDTO(regNo1);
+        VehicleDTO vehicle2 = new VehicleDTO(regNo2);
+
+        instance = new Inspection("Brakes", 30, vehicle1);
+        other = new Inspection("Engine", 50, vehicle2);
+        sameAsInstance = new Inspection("brakes", 30, vehicle1);
     }
 
-    @AfterEach
-    void tearDown() {
+    @After
+    public void tearDown() {
         instance = null;
         other = null;
-        third = null;
+        sameAsInstance = null;
     }
 
     @Test
-    void testNotEquals() {
-        boolean comparisonResult = instance.equals(other);
-        assertFalse(comparisonResult, "The condition is true, when supposed to be false.");
+    public void testNotEquals() {
+        boolean calculatedResult = instance.equals(other);
+        boolean expectedResult = false;
+        assertEquals("The two inspections was wrongfully deemed to be equal", expectedResult, calculatedResult);
     }
 
     @Test
-    void testEquals() {
-        boolean comparisonResult = instance.equals(third);
-        assertTrue(comparisonResult, "The condition is false, when supposed to be true.");
+    public void testEquals() {
+        boolean calculatedResult = instance.equals(sameAsInstance);
+        boolean expectedResult = true;
+        assertEquals("The two inspections was wrongfully deemed not to be equal", expectedResult, calculatedResult);
     }
 
 }

@@ -14,4 +14,15 @@ public class VehicleDTO {
     public String getRegistrationNumber() {
         return registrationNumber;
     }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof VehicleDTO))
+            return false;
+        VehicleDTO vehicleToCompare = (VehicleDTO) obj;
+        if(vehicleToCompare.getRegistrationNumber().equalsIgnoreCase(this.registrationNumber))
+            return true;
+        return false;
+    }
 }

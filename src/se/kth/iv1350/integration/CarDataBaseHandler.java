@@ -34,6 +34,10 @@ public class CarDataBaseHandler {
         return dataBaseInspections;
     }
 
+    /**
+     * Saves the inspection (result) in the database
+     * @param inspectionToSetResultFor The inspection to save
+     */
     public void saveInspectionResult(Inspection inspectionToSetResultFor) {
         for (int i = 0; i < dataBaseInspections.length; i++) {
             if (dataBaseInspections[i].equals(inspectionToSetResultFor)) {

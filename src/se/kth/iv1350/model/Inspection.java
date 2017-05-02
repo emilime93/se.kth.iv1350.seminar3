@@ -28,9 +28,12 @@ public class Inspection {
         if(!(object instanceof Inspection))
             return false;
         Inspection inspToCompare = (Inspection) object;
-        if(inspToCompare.getInspectionCost() == this.inspectionCost
-                && inspToCompare.getInspectionDescription().equalsIgnoreCase(this.inspectionDescription))
-            return true;
+        if(inspToCompare.getInspectionCost() == this.inspectionCost) {
+            if (inspToCompare.getInspectionDescription().equalsIgnoreCase(this.inspectionDescription)) {
+                if (inspToCompare.getVehicle().equals(this.vehicle))
+                    return true;
+            }
+        }
         return false;
     }
 
