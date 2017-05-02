@@ -8,7 +8,7 @@ import se.kth.iv1350.model.Inspection;
  */
 public class CarDataBaseHandler {
 
-    Inspection[] dataBaseInspections;
+    private Inspection[] dataBaseInspections;
 
     /**
      * Creates a fake database full of dummy inspections.

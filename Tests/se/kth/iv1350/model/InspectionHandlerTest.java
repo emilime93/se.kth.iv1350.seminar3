@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
  */
 public class InspectionHandlerTest {
 
-    Inspection[] inspections;
-    InspectionList inspectionList;
-    InspectionHandler inspectionHandler;
+    private Inspection[] inspections;
+    private InspectionList inspectionList;
+    private InspectionHandler inspectionHandler;
 
     @Before
     public void setUp() throws Exception {
@@ -61,7 +61,12 @@ public class InspectionHandlerTest {
 
     @Test
     public void saveInspectionResult() throws Exception {
-        //TODO
+        Inspection passedBrakesInspection = new Inspection("brakes", 30, new VehicleDTO("abc 123"));
+        passedBrakesInspection.setPassed(true);
+        inspectionHandler.saveInspectionResult(passedBrakesInspection);
+        boolean passed =  inspectionHandler.getNextInspection().isPassed();
+        boolean excpected = true;
+        assertEquals("The supposedly passed inspection wasnt passed", passed, excpected);
     }
 
 }
