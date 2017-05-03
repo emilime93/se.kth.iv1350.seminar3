@@ -33,7 +33,6 @@ public class InspectionList {
             return inspections[currentIndex++];
         } catch (Exception e) {
             System.out.println(e);
-            System.out.println("Catch");
             return null;
         }
     }

@@ -14,6 +14,12 @@ public class Controller {
     private CarDataBaseHandler carDataBaseHandler;
     private InspectionHandler inspectionHandler;
 
+    /**
+     * Creates a Controller between the View and the Models
+     * @param garage The garage to use
+     * @param carDataBaseHandler The car database to use
+     * @param inspectionHandler The inspection handler to use
+     */
     public Controller(Garage garage, CarDataBaseHandler carDataBaseHandler, InspectionHandler inspectionHandler) {
         this.garage = garage;
         this.carDataBaseHandler = carDataBaseHandler;
@@ -48,12 +54,18 @@ public class Controller {
      */
     public double enterRegNumber(String regNo) {
         VehicleDTO vehicle = new VehicleDTO(regNo);
-        Inspection[] inspections = carDataBaseHandler.getInspectionsByVehicle(vehicle);
-        //TODO
-        inspectionHandler.setInspectionList(inspections);
-        return inspectionHandler.calculateCost();
+        Inspection[] inspections = this.carDataBaseHandler.getInspectionsByVehicle(vehicle);
+        this.inspectionHandler.setInspectionList(inspections);
+        double cost = inspectionHandler.calculateCost();
+        return cost;
     }
 
+    /**
+     * Makes a card payment, you must have used the card constructor of Payment to use this.
+     * @param cost The cost of the payment
+     * @param creditCard The credit card to pay with
+     * @return True if the payment is authorized, false otherwise
+     */
     public boolean makeCardPayment(double cost, CreditCardDTO creditCard) {
         Payment payment = new Payment(cost, creditCard);
         boolean authorized = payment.makeCardPayment();
@@ -61,6 +73,12 @@ public class Controller {
         return authorized;
     }
 
+    /**
+     * Makes a cash payment, you must have used the cash constructor of Payment to use this.
+     * @param amountPaid The cash amount paid to the cashier
+     * @param cost The cost of the payment
+     * @return The change amount
+     */
     public double makeCashPayment(double amountPaid, double cost) {
         Payment payment = new Payment(amountPaid, cost);
         double change = payment.makeCashPayment();
@@ -68,11 +86,18 @@ public class Controller {
         return change;
     }
 
+    /**
+     * Gives the next inspection to perform
+     * @return The next inspection in the list
+     */
     public Inspection nextInspection() {
         return inspectionHandler.getNextInspection();
-        //TODO null handling of Inspection
     }
 
+    /**
+     * Saves the inspection result from an edited inspection
+     * @param inspection The edited inspection to save to the original
+     */
     public void enterInspectionResult(Inspection inspection) {
         inspectionHandler.saveInspectionResult(inspection);
     }

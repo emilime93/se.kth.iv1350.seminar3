@@ -21,7 +21,7 @@ public class Payment {
      * @param cost The cost of the payment
      * @param amountPaid The cash amount put into the system
      */
-    public Payment(double cost, double amountPaid) {
+    public Payment(double amountPaid, double cost) {
         this.cost = cost;
         this.amountPaid = amountPaid;
     }

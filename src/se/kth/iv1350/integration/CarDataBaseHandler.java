@@ -15,7 +15,7 @@ public class CarDataBaseHandler {
      * In reality this should establish a connection a real database
      */
     public CarDataBaseHandler() {
-        String dummyRegNr = "ABC 123";
+        String dummyRegNr = "abc 123";
         VehicleDTO dummyVehicle = new VehicleDTO(dummyRegNr);
         dataBaseInspections = new Inspection[] {
             new Inspection("Brakes", 30, dummyVehicle),

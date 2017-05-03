@@ -30,6 +30,8 @@ public class InspectionHandler {
         while (inspectionList.hasNext()) {
             accumulatedCost += inspectionList.getNextInspection().getInspectionCost();
         }
+        inspectionList.resetIterator();
+        System.out.println("InspectionHandler: Calculated cost is: " + accumulatedCost);
         return accumulatedCost;
     }
 
@@ -61,6 +63,4 @@ public class InspectionHandler {
     public void setInspectionList(Inspection[] inspectionList) {
         this.inspectionList.setInspections(inspectionList);
     }
-
-
 }

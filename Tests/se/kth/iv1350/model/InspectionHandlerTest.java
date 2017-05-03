@@ -28,7 +28,6 @@ public class InspectionHandlerTest {
         };
         inspectionHandler = new InspectionHandler(new CarDataBaseHandler());
         inspectionHandler.setInspectionList(inspections);
-        //TODO redo these tests
     }
 
     @After
@@ -51,12 +50,9 @@ public class InspectionHandlerTest {
     }
 
     @Test
-    public void getNextInspection() throws Exception {
+    public void testGetNextInspectionIsntNull() throws Exception {
         Inspection i = inspectionHandler.getNextInspection();
-        if (i == null)
-            fail("Inspection is null when not supposed to");
-        if(!(i instanceof Inspection))
-            fail("inspection is not of typ Inspection");
+        assertNotNull(i);
     }
 
     @Test
