@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="87d2498d-5c15-46fe-aa1f-508a80f0cbed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java" afterPath="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/view/View.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/view/View.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1251,7 +1240,7 @@
       <workItem from="1493716128659" duration="6862000" />
       <workItem from="1493737013012" duration="2821000" />
       <workItem from="1493801170013" duration="160000" />
-      <workItem from="1493802922954" duration="7660000" />
+      <workItem from="1493802922954" duration="7691000" />
     </task>
     <task id="LOCAL-00001" summary="First comittment">
       <created>1493206216889</created>
@@ -1372,7 +1361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493805545680</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Every essential class and their essential methods have been&#10;added">
+      <created>1493812936309</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1493812936309</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1408,7 +1404,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40231000" />
+    <option name="totallyTimeSpent" value="40262000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
