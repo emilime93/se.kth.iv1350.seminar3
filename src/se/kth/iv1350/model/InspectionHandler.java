@@ -13,11 +13,10 @@ public class InspectionHandler {
     /**
      * Creates an inspection handler. Responsible for handeling the list with inspections and the different actions
      * related to the inspections.
-     * @param inspectionList The inspection list to handle
      * @param carDataBaseHandler The car data base handler to use to fetch and save results from
      */
-    public InspectionHandler(InspectionList inspectionList, CarDataBaseHandler carDataBaseHandler) {
-        this.inspectionList = inspectionList;
+    public InspectionHandler(CarDataBaseHandler carDataBaseHandler) {
+        this.inspectionList = new InspectionList();
         this.carDataBaseHandler = carDataBaseHandler;
     }
 
@@ -27,6 +26,7 @@ public class InspectionHandler {
      */
     public double calculateCost() {
         double accumulatedCost = 0;
+        inspectionList.resetIterator();
         while (inspectionList.hasNext()) {
             accumulatedCost += inspectionList.getNextInspection().getInspectionCost();
         }

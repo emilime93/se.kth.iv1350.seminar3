@@ -26,30 +26,37 @@ public class InspectionHandlerTest {
                 new Inspection("engine", 50, dummyVehicle),
                 new Inspection("wheels", 10, dummyVehicle)
         };
-        inspectionList = new InspectionList(inspections);
-        inspectionHandler = new InspectionHandler(inspectionList, new CarDataBaseHandler());
+        inspectionHandler = new InspectionHandler(new CarDataBaseHandler());
+        inspectionHandler.setInspectionList(inspections);
+        //TODO redo these tests
     }
 
     @After
     public void tearDown() throws Exception {
         inspections = null;
         inspectionList = null;
+        inspectionHandler = null;
     }
 
     @Test
-    public void calculateCost() throws Exception {
-        int expected = 30 + 50 + 10;8
-        int calculated = inspectionHandler.calculateCost();
-        assertEquals("The supposedly equal costs isnt equal", expected, calculated);
+    public void testCalculateCostCorrect() throws Exception {
+        double expectedDouble = 30 + 50 + 10;
+        double calculatedDouble = inspectionHandler.calculateCost();
+        boolean expected = true;
+        boolean calculated = false;
+        if(expectedDouble == calculatedDouble) {
+            calculated = true;
+        }
+        assertEquals("Same costs are not equal", expected, calculated);
     }
 
     @Test
     public void getNextInspection() throws Exception {
         Inspection i = inspectionHandler.getNextInspection();
         if (i == null)
-            fail("FAIL!!11!!1!11");
+            fail("Inspection is null when not supposed to");
         if(!(i instanceof Inspection))
-            fail("FAIL!!!!!!!");
+            fail("inspection is not of typ Inspection");
     }
 
     @Test
@@ -65,8 +72,8 @@ public class InspectionHandlerTest {
         passedBrakesInspection.setPassed(true);
         inspectionHandler.saveInspectionResult(passedBrakesInspection);
         boolean passed =  inspectionHandler.getNextInspection().isPassed();
-        boolean excpected = true;
-        assertEquals("The supposedly passed inspection wasnt passed", passed, excpected);
+        boolean expected = true;
+        assertEquals("The supposedly passed inspection wasn't passed", passed, expected);
     }
 
 }

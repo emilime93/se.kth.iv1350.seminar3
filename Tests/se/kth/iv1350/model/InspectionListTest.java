@@ -18,16 +18,36 @@ public class InspectionListTest {
     public void setUp() throws Exception {
         VehicleDTO dummyVehicle = new VehicleDTO("abc 123");
         Inspection[] inspections = new Inspection[] {
-                new Inspection("brakes", 30, dummyVehicle),
-                new Inspection("engine", 50, dummyVehicle),
-                new Inspection("wheels", 10, dummyVehicle)
+                new Inspection("Brakes", 30, dummyVehicle),
+                new Inspection("Engine", 50, dummyVehicle),
+                new Inspection("Lights", 10, dummyVehicle)
         };
-        instance = new InspectionList(inspections);
+        instance = new InspectionList();
+        instance.setInspections(inspections);
     }
 
     @After
     public void tearDown() throws Exception {
         instance = null;
+    }
+
+    @Test
+    public void testGetNextInspection() {
+        boolean expected = true;
+        Inspection fetchedInspection = instance.getNextInspection();
+        boolean calculated = fetchedInspection.equals(new Inspection("Brakes", 30, new VehicleDTO("abc 123")));
+        assertEquals("The supposedly equal inspections isnt equal", expected, calculated);
+
+        fetchedInspection = instance.getNextInspection();
+        calculated = fetchedInspection.equals(new Inspection("Engine", 50, new VehicleDTO("abc 123")));
+        assertEquals("The supposedly equal inspections isnt equal", expected, calculated);
+
+        fetchedInspection = instance.getNextInspection();
+        calculated = fetchedInspection.equals(new Inspection("Lights", 10, new VehicleDTO("abc 123")));
+        assertEquals("The supposedly equal inspections isnt equal", expected, calculated);
+
+        fetchedInspection = instance.getNextInspection();
+        assertNull(fetchedInspection);
     }
 
     @Test

@@ -7,21 +7,13 @@ public class InspectionList {
 
     private Inspection[] inspections;
 
-    private int currentIndex;
-    private int numberOfInspections;
-
-    /**
-     * Creates an list of inspections from the supplied array of Inspections
-     * @param inspections The array of inspections to create the list from.
-     */
-    public InspectionList(Inspection[] inspections) {
-        this.inspections = inspections;
-        this.numberOfInspections = inspections.length;
-        this.currentIndex = 0;
-    }
+    private int currentIndex = 0;
+    private int numberOfInspections = 0;
 
     public void setInspections(Inspection[] inspections) {
         this.inspections = inspections;
+        this.numberOfInspections = inspections.length;
+        this.currentIndex = 0;
     }
 
     /**
@@ -41,6 +33,7 @@ public class InspectionList {
             return inspections[currentIndex++];
         } catch (Exception e) {
             System.out.println(e);
+            System.out.println("Catch");
             return null;
         }
     }

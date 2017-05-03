@@ -25,6 +25,31 @@ public class CarDataBaseHandlerTest {
         carDataBaseHandler = null;
     }
 
+    /*
+    new Inspection("Brakes", 30, dummyVehicle),
+            new Inspection("Engine", 50, dummyVehicle),yVyV
+            new Inspection("Lights", 10, dummyVehicle)
+     */
+
+    @Test
+    public void testGetInspectionsByVehicle() {
+        Inspection[] inspections = carDataBaseHandler.getInspectionsByVehicle(null);
+
+        boolean expected = true;
+        boolean calculated = inspections[0].equals(new Inspection("Brakes", 30, new VehicleDTO("abc 123")));
+        assertEquals("#1 Two supposedly identical Inspections isnt equal", expected, calculated);
+
+        expected = true;
+        calculated = inspections[1].equals(new Inspection("engine", 50, new VehicleDTO("abc 123")));
+        assertEquals("#2 Two supposedly identical Inspections isnt equal", expected, calculated);
+
+        expected = true;
+        calculated = inspections[2].equals(new Inspection("lights", 10, new VehicleDTO("abc 123")));
+        assertEquals("#3 Two supposedly identical Inspections isnt equal", expected, calculated);
+
+        assertEquals("Wrong array length", 3, inspections.length);
+    }
+
     @Test
     public void testSaveInspectionResult() throws Exception {
         String regNo = "abc 123";

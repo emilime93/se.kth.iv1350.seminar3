@@ -49,6 +49,7 @@ public class Controller {
     public double enterRegNumber(String regNo) {
         VehicleDTO vehicle = new VehicleDTO(regNo);
         Inspection[] inspections = carDataBaseHandler.getInspectionsByVehicle(vehicle);
+        //TODO
         inspectionHandler.setInspectionList(inspections);
         return inspectionHandler.calculateCost();
     }
