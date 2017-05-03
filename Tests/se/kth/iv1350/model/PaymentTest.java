@@ -13,17 +13,18 @@ import static org.junit.Assert.*;
  * Created by Emil on 2017-05-02.
  */
 public class PaymentTest {
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
 
     @Test
     public void testCashPaymentReciept() throws Exception {
-        Payment payment = new Payment(70, 100);
+        Payment payment = new Payment(100, 70);
+        double change = payment.makeCashPayment();
+        double expectedChange = 30;
+        boolean expected = true;
+        boolean calculated = false;
+        if(change == expectedChange) {
+            calculated = true;
+        }
+        assertEquals("Incorrect change", expected, calculated);
     }
 
     @Test
@@ -31,7 +32,9 @@ public class PaymentTest {
         Payment payment = new Payment(100, new CreditCardDTO(
                 "Bosse Eriksson", "4321", "111", new Date()
         ));
-
+        boolean calculated = payment.makeCardPayment();
+        boolean expected = true;
+        assertEquals("Card payment that should be authorized isnt authroized", expected, calculated);
     }
 
 }
