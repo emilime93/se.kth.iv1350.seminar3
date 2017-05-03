@@ -20,7 +20,7 @@ public class View {
      */
     public View(Controller controller) {
         this.controller = controller;
-        doHardcodedShit();
+        doHardcodedCashShit();
     }
 
     /**
@@ -48,24 +48,6 @@ public class View {
             System.out.println(inspection + "\n");
         }
 
-//        Inspection inspection1 = controller.nextInspection();
-//        System.out.println("Next inspection:\n" + inspection1);
-//        inspection1.setPassed(true);
-//        controller.enterInspectionResult(inspection1);
-//        System.out.println("Inspection pass status is now: " + inspection1.isPassed() + "\n");
-//
-//        Inspection inspection2 = controller.nextInspection();
-//        System.out.println("Next inspection:\n" + inspection2);
-//        inspection2.setPassed(true);
-//        controller.enterInspectionResult(inspection2);
-//        System.out.println("Inspection pass status is now: " + inspection2.isPassed() + "\n");
-//
-//        Inspection inspection3 = controller.nextInspection();
-//        System.out.println("Next inspection:\n" + inspection3);
-//        inspection3.setPassed(true);
-//        controller.enterInspectionResult(inspection3);
-//        System.out.println("Inspection pass status is now: " + inspection3.isPassed() + "\n");
-
         controller.openDoor();
         controller.closeDoor();
 
@@ -80,16 +62,22 @@ public class View {
         double price = controller.enterRegNumber("abc 123");
         controller.makeCashPayment(100, price);
 
-        Inspection inspection1 = controller.nextInspection();
-        inspection1.setPassed(true);
-        controller.enterInspectionResult(inspection1);
+        Inspection inspection;
+        while ((inspection = controller.nextInspection()) != null) {
+            System.out.println("Next inspection:\n" + inspection);
+            inspection.setPassed(true);
+            System.out.println("->Set passed: " + inspection.isPassed() + "\n");
+            controller.enterInspectionResult(inspection);
+        }
 
-        Inspection inspection2 = controller.nextInspection();
-        inspection2.setPassed(true);
-        controller.enterInspectionResult(inspection2);
+        System.out.println();
 
-        Inspection inspection3 = controller.nextInspection();
-        inspection3.setPassed(true);
-        controller.enterInspectionResult(inspection3);
+        System.out.println("---Updated database after inspections:");
+        while ((inspection = controller.nextInspection()) != null) {
+            System.out.println(inspection + "\n");
+        }
+
+        controller.openDoor();
+        controller.closeDoor();
     }
 }
