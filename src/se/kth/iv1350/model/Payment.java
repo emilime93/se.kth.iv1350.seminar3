@@ -58,6 +58,9 @@ public class Payment {
         return change;
     }
 
+    /**
+     * Prints the receipt for the payment to the standard out stream
+     */
     public void printReceipt() {
         Printer.printReciept(this.receipt);
     }

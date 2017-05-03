@@ -15,6 +15,10 @@ public class VehicleDTO {
         this.registrationNumber = registrationNumber;
     }
 
+    /**
+     * Returns the registration number of the car
+     * @return The registration number of the car
+     */
     public String getRegistrationNumber() {
         return registrationNumber;
     }

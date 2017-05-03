@@ -61,6 +61,10 @@ public class InspectionHandler {
         setInspectionList(carDataBaseHandler.getInspectionsByVehicle(null)); //Null because dummy implementation
     }
 
+    /**
+     * Sets the inspection list to use
+     * @param inspectionList The list of inspections to use
+     */
     public void setInspectionList(Inspection[] inspectionList) {
         this.inspectionList.setInspections(inspectionList);
     }

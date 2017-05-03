@@ -38,22 +38,42 @@ public class Inspection {
         return false;
     }
 
+    /**
+     * Returns the vehicle for the inspection
+     * @return The vehicle for the inspection
+     */
     public VehicleDTO getVehicle() {
         return vehicle;
     }
 
+    /**
+     * Returns true if the inspection is passed, otherwise false
+     * @return True if the inspection is passed, otherwise false
+     */
     public boolean isPassed() {
         return passed;
     }
 
+    /**
+     * Sets the <code>passed</code> boolean status of the inspection
+     * @param passed True if the inspection is passed, false if it's failed
+     */
     public void setPassed(boolean passed) {
         this.passed = passed;
     }
 
+    /**
+     * Gets the inspection cost
+     * @return The cost of the inspection
+     */
     public int getInspectionCost() {
         return inspectionCost;
     }
 
+    /**
+     * Returns the description of the inspection
+     * @return The description of the inspection
+     */
     public String getInspectionDescription() {
         return inspectionDescription;
     }
