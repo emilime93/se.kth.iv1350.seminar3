@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
 public class InspectionHandlerTest {
 
     private Inspection[] inspections;
-    private InspectionList inspectionList;
     private InspectionHandler inspectionHandler;
 
     @Before
@@ -33,7 +32,6 @@ public class InspectionHandlerTest {
     @After
     public void tearDown() throws Exception {
         inspections = null;
-        inspectionList = null;
         inspectionHandler = null;
     }
 
@@ -59,7 +57,7 @@ public class InspectionHandlerTest {
     public void hasNext() throws Exception {
         boolean expected = true;
         boolean calculated = inspectionHandler.hasNext();
-        assertEquals("Something is wrong", expected, calculated);
+        assertEquals("hasNext incorrectly returns false", expected, calculated);
     }
 
     @Test

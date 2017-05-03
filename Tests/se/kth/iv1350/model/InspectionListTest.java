@@ -64,7 +64,7 @@ public class InspectionListTest {
         }
         boolean expected = false;
         boolean calculated = instance.hasNext();
-        assertEquals("hasNext() falsley returned true", expected, calculated);
+        assertEquals("hasNext() falseley returned true", expected, calculated);
     }
 
 }

@@ -21,7 +21,7 @@ public class InspectionHandler {
     }
 
     /**
-     * Calculates the total cost for all inspections for the vehicle.
+     * Calculates the total cost for all inspections for the vehicle, and resets the iterator.
      * @return The total cost of the inspections
      */
     public double calculateCost() {
@@ -53,11 +53,12 @@ public class InspectionHandler {
     }
 
     /**
-     * Saves the inspection result in the database
+     * Saves the inspection result in the database and fetches the newly updated database to the local list
      * @param inspectionToSave The inspection, with correct result, to save
      */
     public void saveInspectionResult(Inspection inspectionToSave) {
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
+        setInspectionList(carDataBaseHandler.getInspectionsByVehicle(null)); //Null because dummy implementation
     }
 
     public void setInspectionList(Inspection[] inspectionList) {

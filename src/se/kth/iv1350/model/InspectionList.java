@@ -10,6 +10,10 @@ public class InspectionList {
     private int currentIndex = 0;
     private int numberOfInspections = 0;
 
+    /**
+     * Sets the list of inspection to use and initializes the iterator
+     * @param inspections The inspection list to use
+     */
     public void setInspections(Inspection[] inspections) {
         this.inspections = inspections;
         this.numberOfInspections = inspections.length;

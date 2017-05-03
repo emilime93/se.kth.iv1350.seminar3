@@ -29,7 +29,7 @@ public class PaymentTest {
     @Test
     public void testCardPaymentReciept() throws Exception {
         Payment payment = new Payment(100, new CreditCardDTO(
-                "Emil Lindholm Brandt", "1337", "123", new Date()
+                "Bosse Eriksson", "4321", "111", new Date()
         ));
 
     }
