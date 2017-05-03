@@ -7,6 +7,10 @@ public class VehicleDTO {
 
     private String registrationNumber;
 
+    /**
+     * Creates a vehicle DTO that currently only holds its registration number
+     * @param registrationNumber The vehicles registration number
+     */
     public VehicleDTO(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
@@ -14,7 +18,6 @@ public class VehicleDTO {
     public String getRegistrationNumber() {
         return registrationNumber;
     }
-
 
     @Override
     public boolean equals(Object obj) {

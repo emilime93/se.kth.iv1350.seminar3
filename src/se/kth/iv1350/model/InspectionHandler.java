@@ -10,13 +10,23 @@ public class InspectionHandler {
     private InspectionList inspectionList;
     private CarDataBaseHandler carDataBaseHandler;
 
+    /**
+     * Creates an inspection handler. Responsible for handeling the list with inspections and the different actions
+     * related to the inspections.
+     * @param inspectionList The inspection list to handle
+     * @param carDataBaseHandler The car data base handler to use to fetch and save results from
+     */
     public InspectionHandler(InspectionList inspectionList, CarDataBaseHandler carDataBaseHandler) {
         this.inspectionList = inspectionList;
         this.carDataBaseHandler = carDataBaseHandler;
     }
 
-    public int calculateCost() {
-        int accumulatedCost = 0;
+    /**
+     * Calculates the total cost for all inspections for the vehicle.
+     * @return The total cost of the inspections
+     */
+    public double calculateCost() {
+        double accumulatedCost = 0;
         while (inspectionList.hasNext()) {
             accumulatedCost += inspectionList.getNextInspection().getInspectionCost();
         }
@@ -42,7 +52,7 @@ public class InspectionHandler {
 
     /**
      * Saves the inspection result in the database
-     * @param inspectionToSave The inspection to save
+     * @param inspectionToSave The inspection, with correct result, to save
      */
     public void saveInspectionResult(Inspection inspectionToSave) {
         carDataBaseHandler.saveInspectionResult(inspectionToSave);

@@ -1,6 +1,7 @@
 package se.kth.iv1350.model;
 
 import se.kth.iv1350.dto.CreditCardDTO;
+import se.kth.iv1350.integration.Printer;
 
 import java.util.Date;
 
@@ -42,7 +43,7 @@ public class Payment {
     public boolean makeCardPayment() {
         boolean isPaymentAuthorized = ExtPayAuthSys.authorizePayment(this);
         this.dateOfTransaction = new Date();
-        receipt = new Receipt(this.creditCard, this.cost, this.dateOfTransaction);
+        this.receipt = new Receipt(this.creditCard, this.cost, this.dateOfTransaction);
         return isPaymentAuthorized;
     }
 
@@ -53,7 +54,11 @@ public class Payment {
     public double makeCashPayment() {
         this.dateOfTransaction = new Date();
         double change = this.amountPaid - this.cost;
-        receipt = new Receipt(this.amountPaid, this.cost, change, this.dateOfTransaction);
+        this.receipt = new Receipt(this.amountPaid, this.cost, change, this.dateOfTransaction);
         return change;
+    }
+
+    public void printReceipt() {
+        Printer.printReciept(this.receipt);
     }
 }

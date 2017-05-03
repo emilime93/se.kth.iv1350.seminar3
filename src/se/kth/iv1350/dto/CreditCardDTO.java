@@ -12,6 +12,13 @@ public class CreditCardDTO {
     private String cvc;
     private Date expiaryDate;
 
+    /**
+     * Creates a Credit Card DTO that holds relevant information
+     * @param holder The name of the card holder
+     * @param cardNumber The card number
+     * @param cvc The cvc security code
+     * @param expiaryDate The expiary date
+     */
     public CreditCardDTO(String holder, String cardNumber, String cvc, Date expiaryDate) {
         this.holder = holder;
         this.cardNumber = cardNumber;

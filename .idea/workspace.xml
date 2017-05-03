@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="87d2498d-5c15-46fe-aa1f-508a80f0cbed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/se/kth/iv1350/dto/VehicleDTOTest.java" afterPath="$PROJECT_DIR$/Tests/se/kth/iv1350/dto/VehicleDTOTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java" afterPath="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Display.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Display.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Garage.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Garage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/iv1350/view/View.java" afterPath="$PROJECT_DIR$/src/se/kth/iv1350/view/View.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,21 +40,101 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Garage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Garage.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+            <state relative-caret-position="153">
+              <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Display.java">
+      <file leaf-file-name="InspectionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="279">
+              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InspectionHandlerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/view/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Receipt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtPayAuthSys.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="83" lean-forward="false" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Payment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InspectionList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -79,7 +164,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.sem3.controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/dto/VehicleDTO.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.startup/Main.java" />
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.model/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/startup/MainTest.java" />
@@ -88,24 +172,27 @@
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.model/Inspection.java" />
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.model/InspectionList.java" />
         <option value="$PROJECT_DIR$/src/se.kth.iv1350.model/InspectionHandler.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionTest.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionListTest.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/integration/CarDataBaseHandler.java" />
-        <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Inspection.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/integration/CarDataBaseHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/dto/VehicleDTOTest.java" />
         <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/model/PaymentTest.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Garage.java" />
         <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Display.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/view/View.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java" />
+        <option value="$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java" />
       </list>
     </option>
   </component>
@@ -1164,7 +1251,7 @@
       <workItem from="1493716128659" duration="6862000" />
       <workItem from="1493737013012" duration="2821000" />
       <workItem from="1493801170013" duration="160000" />
-      <workItem from="1493802922954" duration="2554000" />
+      <workItem from="1493802922954" duration="7660000" />
     </task>
     <task id="LOCAL-00001" summary="First comittment">
       <created>1493206216889</created>
@@ -1278,7 +1365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493804220607</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Every essential class and their essential methods have been&#10;added">
+      <created>1493805545680</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1493805545680</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1314,7 +1408,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35125000" />
+    <option name="totallyTimeSpent" value="40231000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1402,7 +1496,8 @@
     <MESSAGE value="Hurr durr" />
     <MESSAGE value="Intorduced Receipt" />
     <MESSAGE value="Introduced Receipt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduced Receipt" />
+    <MESSAGE value="Every essential class and their essential methods have been&#10;added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Every essential class and their essential methods have been&#10;added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1618,14 +1713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/integration/CarDataBaseHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1650,26 +1737,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/dto/CreditCardDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/dto/VehicleDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1682,10 +1761,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Garage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1698,74 +1785,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/ExtPayAuthSys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="153">
+          <caret line="9" column="83" lean-forward="false" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/startup/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/view/View.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="272">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/InspectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="279">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Garage.java">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/integration/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Receipt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/se/kth/iv1350/model/InspectionHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/model/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/iv1350/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -38,7 +38,7 @@ public class InspectionHandlerTest {
 
     @Test
     public void calculateCost() throws Exception {
-        int expected = 30 + 50 + 10;
+        int expected = 30 + 50 + 10;8
         int calculated = inspectionHandler.calculateCost();
         assertEquals("The supposedly equal costs isnt equal", expected, calculated);
     }

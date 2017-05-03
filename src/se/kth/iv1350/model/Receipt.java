@@ -17,12 +17,25 @@ public class Receipt {
     private double amountPaid;
     private double change;
 
+    /**
+     * Creates an receipt for a credit card payment
+     * @param creditCard The credit card used for the payment
+     * @param totalCost The total cost of the payment
+     * @param dateOfTransaction The date of the transaction
+     */
     public Receipt(CreditCardDTO creditCard, double totalCost, Date dateOfTransaction) {
         this.dateOfTransaction = dateOfTransaction;
         this.totalCost = totalCost;
         this.creditCard = creditCard;
     }
 
+    /**
+     * Creates an receipt for a cash payment
+     * @param amountPaid The amount paid by the customer
+     * @param totalCost The total cost for the payment
+     * @param change The change amount
+     * @param dateOfTransaction The date of the transaction
+     */
     public Receipt(double amountPaid, double totalCost,  double change, Date dateOfTransaction) {
         this.dateOfTransaction = dateOfTransaction;
         this.totalCost = totalCost;

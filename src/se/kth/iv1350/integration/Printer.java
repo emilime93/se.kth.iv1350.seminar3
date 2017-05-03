@@ -8,6 +8,10 @@ import se.kth.iv1350.model.Receipt;
  */
 public class Printer {
 
+    /**
+     * Prints the receipt to the standard out stream
+     * @param receipt The receipt to be printed
+     */
     public static void printReciept(Receipt receipt) {
         System.out.println(receipt);
     }
