@@ -38,6 +38,16 @@ public class Inspection {
         return false;
     }
 
+    @Override
+    public String toString() {
+        String description = "";
+        description += "Inspection description: " + this.inspectionDescription + "\n" +
+                "Cost: " + this.inspectionCost + "\n" +
+                "Vehicle: " + this.vehicle.getRegistrationNumber() + "\n" +
+                "Passed: " + this.passed;
+        return description;
+    }
+
     /**
      * Returns the vehicle for the inspection
      * @return The vehicle for the inspection

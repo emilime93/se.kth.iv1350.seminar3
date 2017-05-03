@@ -21,6 +21,14 @@ public class InspectionList {
     }
 
     /**
+     * Sets/updates the inspection list without resetting it
+     * @param inspections The updated list. Must be the same as the last one, but modified.
+     */
+    public void updateCurrentList(Inspection[] inspections) {
+        this.inspections = inspections;
+    }
+
+    /**
      * Tests if there are more inspections in the list.
      * @return True if there are more inspections in the list. False otherwise
      */
@@ -34,9 +42,10 @@ public class InspectionList {
      */
     public Inspection getNextInspection() {
         try {
-            return inspections[currentIndex++];
+            return this.inspections[this.currentIndex++];
         } catch (Exception e) {
-            System.out.println(e);
+//            System.out.println(e);
+            this.currentIndex = 0;
             return null;
         }
     }

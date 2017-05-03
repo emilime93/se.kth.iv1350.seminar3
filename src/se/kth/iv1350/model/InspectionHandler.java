@@ -58,7 +58,7 @@ public class InspectionHandler {
      */
     public void saveInspectionResult(Inspection inspectionToSave) {
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
-        setInspectionList(carDataBaseHandler.getInspectionsByVehicle(null)); //Null because dummy implementation
+        inspectionList.updateCurrentList(carDataBaseHandler.getInspectionsByVehicle(null)); //Null because dummy implementation
     }
 
     /**

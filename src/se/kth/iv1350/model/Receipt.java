@@ -45,7 +45,7 @@ public class Receipt {
 
     @Override
     public String toString() {
-        String stringRepresentaion = "--- Reciept ---\n" +
+        String stringRepresentaion = "\n--- Reciept ---\n" +
                 "Cost:\t" + totalCost + "\n";
         // If it's a
         if(creditCard == null) {
@@ -58,7 +58,7 @@ public class Receipt {
                     "Car Inspection Company\n";
         }
 
-        stringRepresentaion += "Date: " + this.dateOfTransaction;
+        stringRepresentaion += "Date: " + this.dateOfTransaction + "\n";
         return stringRepresentaion;
     }
 }
