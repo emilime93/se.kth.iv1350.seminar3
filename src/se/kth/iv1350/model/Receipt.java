@@ -38,7 +38,7 @@ public class Receipt {
         if(creditCard == null) {
             stringRepresentaion +=
                     "Paid:\t" + amountPaid + "\n" +
-                            "Change:\t" + (change) + "\n" +
+                            "Change:\t" + change + "\n" +
                             "Car Inspection Company\n";
         } else {    //If the payment if made by credit card
             stringRepresentaion += "Payment by card\n" +

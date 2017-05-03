@@ -13,6 +13,7 @@ public class Payment {
     private int amountPaid;
     private CreditCardDTO creditCard;
     private Date dateOfTransaction;
+    private Receipt receipt;
 
     /**
      * Creates an payment object for a cash payment.
@@ -35,25 +36,24 @@ public class Payment {
     }
 
     /**
-     * Attempts to make a card payment
+     * Attempts to make a card payment and creates a receipt
      * @return True if the payment was authorized
      */
     public boolean makeCardPayment() {
-        ExtPayAuthSys extPayAuthSys = new ExtPayAuthSys();
+        boolean isPaymentAuthorized = ExtPayAuthSys.authorizePayment(this);
         this.dateOfTransaction = new Date();
-        return true;
+        receipt = new Receipt(this.creditCard, this.cost, this.dateOfTransaction);
+        return isPaymentAuthorized;
     }
 
     /**
-     * Makes a cash payment
+     * Makes a cash payment and creates a receipt
      * @return The change amount
      */
-    public int makeCashPayment() {
+    public double makeCashPayment() {
         this.dateOfTransaction = new Date();
-        return cost - amountPaid;
-    }
-
-    public Date getDateOfTransaction() {
-        return dateOfTransaction;
+        double change = this.amountPaid - this.cost;
+        receipt = new Receipt(this.amountPaid, this.cost, change, this.dateOfTransaction);
+        return change;
     }
 }
