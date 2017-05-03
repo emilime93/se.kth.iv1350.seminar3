@@ -10,8 +10,8 @@ import java.util.Date;
  */
 public class Payment {
 
-    private int cost;
-    private int amountPaid;
+    private double cost;
+    private double amountPaid;
     private CreditCardDTO creditCard;
     private Date dateOfTransaction;
     private Receipt receipt;
@@ -21,7 +21,7 @@ public class Payment {
      * @param cost The cost of the payment
      * @param amountPaid The cash amount put into the system
      */
-    public Payment(int cost, int amountPaid) {
+    public Payment(double cost, double amountPaid) {
         this.cost = cost;
         this.amountPaid = amountPaid;
     }
@@ -31,7 +31,7 @@ public class Payment {
      * @param cost The cost of the payment
      * @param creditCard The credit card to make the payment with
      */
-    public Payment(int cost, CreditCardDTO creditCard) {
+    public Payment(double cost, CreditCardDTO creditCard) {
         this.cost = cost;
         this.creditCard = creditCard;
     }

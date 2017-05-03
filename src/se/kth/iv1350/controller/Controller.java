@@ -53,11 +53,27 @@ public class Controller {
         return inspectionHandler.calculateCost();
     }
 
-    public boolean makeCardPayment(int cost, CreditCardDTO creditCard) {
+    public boolean makeCardPayment(double cost, CreditCardDTO creditCard) {
         Payment payment = new Payment(cost, creditCard);
         boolean authorized = payment.makeCardPayment();
         payment.printReceipt();
         return authorized;
+    }
+
+    public double makeCashPayment(double amountPaid, double cost) {
+        Payment payment = new Payment(amountPaid, cost);
+        double change = payment.makeCashPayment();
+        payment.printReceipt();
+        return change;
+    }
+
+    public Inspection nextInspection() {
+        return inspectionHandler.getNextInspection();
+        //TODO null handling of Inspection
+    }
+
+    public void enterInspectionResult(Inspection inspection) {
+        inspectionHandler.saveInspectionResult(inspection);
     }
 
 }
