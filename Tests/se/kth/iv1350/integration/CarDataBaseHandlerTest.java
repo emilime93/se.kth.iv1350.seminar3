@@ -26,7 +26,7 @@ public class CarDataBaseHandlerTest {
     }
 
     @Test
-    public void saveInspectionResult() throws Exception {
+    public void testSaveInspectionResult() throws Exception {
         String regNo = "abc 123";
         VehicleDTO dummyVehicle = new VehicleDTO(regNo);
         Inspection inspectionToSave = new Inspection("Brakes", 30, dummyVehicle);
@@ -36,6 +36,20 @@ public class CarDataBaseHandlerTest {
         boolean expected = true;
         boolean calculated = fetchedInspections[0].isPassed();
         assertEquals("The saved inspection result isn't properly saved", expected, calculated);
+    }
+
+    @Test
+    public void testFailSaveInspectionResult() {
+        String regNo = "abc 123";
+        VehicleDTO dummyVehicle = new VehicleDTO(regNo);
+        Inspection inspectionToSave = new Inspection("engine", 40, dummyVehicle);
+        inspectionToSave.setPassed(true);
+        carDataBaseHandler.saveInspectionResult(inspectionToSave);
+        Inspection[] fetchedInspections = carDataBaseHandler.getInspectionsByVehicle(dummyVehicle);
+        boolean expected = false;
+        boolean calculated = fetchedInspections[0].isPassed();
+        assertEquals("An non-existing inspection wrongfully managed to be saved as a result in the database",
+                expected, calculated);
     }
 
 }
