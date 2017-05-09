@@ -3,7 +3,7 @@ package se.kth.iv1350.model;
 import se.kth.iv1350.dto.VehicleDTO;
 
 /**
- * Created by Emil on 2017-04-27.
+ * Inspections class, representing a car inspection.
  */
 public class Inspection {
 
@@ -16,6 +16,7 @@ public class Inspection {
      * This constructor creates a new instance of an Inspection.
      * @param inspectionDescription The description of the inspection
      * @param inspectionCost The cost of the inspection
+     * @param vehicle The vehicle that the inspection is concerned
      */
     public Inspection(String inspectionDescription, int inspectionCost, VehicleDTO vehicle) {
         this.vehicle = vehicle;

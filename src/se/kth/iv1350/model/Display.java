@@ -1,7 +1,7 @@
 package se.kth.iv1350.model;
 
 /**
- * Created by Emil on 2017-05-01.
+ * The integration class responsible for handling the display
  */
 public class Display {
 
