@@ -1,14 +1,18 @@
 package se.kth.iv1350.integration;
 
 import se.kth.iv1350.dto.VehicleDTO;
+import se.kth.iv1350.model.IllegalLicenseNumberException;
+import se.kth.iv1350.model.IllegalLicenseNumberFormatException;
 import se.kth.iv1350.model.Inspection;
 
 /**
- * Created by Emil on 2017-05-01.
+ * This class handles the calls to the vehicle registration number database
  */
 public class CarDataBaseHandler {
 
     private Inspection[] dataBaseInspections;
+
+    private final static String[] LEGAL_LICENSE_NUMBERS = {"ABC 123", "XYZ 789", "AAA 111"};
 
     /**
      * Creates a fake database full of dummy inspections.
@@ -29,9 +33,21 @@ public class CarDataBaseHandler {
      * @param vehicle The vehicle to search inspections by
      * @return Dummy inspection list
      */
-    public Inspection[] getInspectionsByVehicle(VehicleDTO vehicle) {
+    public Inspection[] getInspectionsByVehicle(VehicleDTO vehicle) throws IllegalLicenseNumberException,
+            IllegalLicenseNumberFormatException {
         //Returns the dummy inspection, in reality this should search by car.
-        return this.dataBaseInspections;
+
+        if(vehicle.getRegistrationNumber().length() != 7) {
+            throw new IllegalLicenseNumberFormatException("Wrong licence number format." +
+                    " The format should be \"CCC NNN\"");
+        }
+
+        for (int i = 0; i < LEGAL_LICENSE_NUMBERS.length; i++) {
+            if (LEGAL_LICENSE_NUMBERS[i].equalsIgnoreCase(vehicle.getRegistrationNumber())) {
+                return this.dataBaseInspections;
+            }
+        }
+        throw new IllegalLicenseNumberException("The entered licence number has no");
     }
 
     /**

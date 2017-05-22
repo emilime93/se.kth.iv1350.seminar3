@@ -1,5 +1,6 @@
 package se.kth.iv1350.model;
 
+import se.kth.iv1350.dto.VehicleDTO;
 import se.kth.iv1350.integration.CarDataBaseHandler;
 
 /**
@@ -36,6 +37,20 @@ public class InspectionHandler {
     }
 
     /**
+     * Fetches the inspections for a specified vehicle and calculates the cost
+     * @param regNo The registration number for the vehicle
+     * @return The cost for all the inspections of the vehicle
+     */
+    public double enterRegNumber(String regNo) throws IllegalLicenseNumberFormatException,
+            IllegalLicenseNumberException {
+        VehicleDTO vehicle = new VehicleDTO(regNo);
+        Inspection[] inspections = this.carDataBaseHandler.getInspectionsByVehicle(vehicle);
+        setInspectionList(inspections);
+        double cost = calculateCost();
+        return cost;
+    }
+
+    /**
      * Returns the next inspection, null if there ain't no inspection.
      * @return The next inspection.
      */
@@ -56,9 +71,11 @@ public class InspectionHandler {
      * Saves the inspection result in the database and fetches the newly updated database to the local list
      * @param inspectionToSave The inspection, with correct result, to save
      */
-    public void saveInspectionResult(Inspection inspectionToSave) {
+    public void saveInspectionResult(Inspection inspectionToSave) throws IllegalLicenseNumberException,
+            IllegalLicenseNumberFormatException {
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
-        inspectionList.updateCurrentList(carDataBaseHandler.getInspectionsByVehicle(null)); //Null because dummy implementation
+        VehicleDTO dummyVehicle = new VehicleDTO("ABC 123");
+        inspectionList.updateCurrentList(carDataBaseHandler.getInspectionsByVehicle(dummyVehicle));
     }
 
     /**

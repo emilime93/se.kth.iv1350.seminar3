@@ -2,6 +2,8 @@ package se.kth.iv1350.view;
 
 import se.kth.iv1350.controller.Controller;
 import se.kth.iv1350.dto.CreditCardDTO;
+import se.kth.iv1350.model.IllegalLicenseNumberException;
+import se.kth.iv1350.model.IllegalLicenseNumberFormatException;
 import se.kth.iv1350.model.Inspection;
 
 import java.util.Date;
@@ -20,7 +22,7 @@ public class View {
      */
     public View(Controller controller) {
         this.controller = controller;
-        doHardcodedCashShit();
+        doHardcodedShit();
     }
 
     /**
@@ -29,16 +31,31 @@ public class View {
     private void doHardcodedShit() {
         controller.nextCustomer();
         controller.closeDoor();
-        double price = controller.enterRegNumber("abc 123");
-        CreditCardDTO creditCard = new CreditCardDTO("Memi Hihhi Bant", "1337 420", "666", new Date());
-        controller.makeCardPayment(price, creditCard);
+        double price = 0;
+        try {
+            price = controller.enterRegNumber("abc 123");
+        } catch (IllegalLicenseNumberException illegalLicenseNumber) {
+            System.out.println();
+        } catch (IllegalLicenseNumberFormatException illegalFormat) {
+
+        } catch (Exception e) {
+
+        }
+
+        System.out.println();
 
         Inspection inspection;
         while ((inspection = controller.nextInspection()) != null) {
             System.out.println("Next inspection:\n" + inspection);
             inspection.setPassed(true);
             System.out.println("->Set passed: " + inspection.isPassed() + "\n");
-            controller.enterInspectionResult(inspection);
+            try {
+                controller.enterInspectionResult(inspection);
+            } catch (IllegalLicenseNumberException e) {
+                e.printStackTrace();
+            } catch (IllegalLicenseNumberFormatException e) {
+                e.printStackTrace();
+            }
         }
 
         System.out.println();
@@ -47,6 +64,9 @@ public class View {
         while ((inspection = controller.nextInspection()) != null) {
             System.out.println(inspection + "\n");
         }
+
+        CreditCardDTO creditCard = new CreditCardDTO("Memi Hiho Bant", "1337 420", "666", new Date());
+        controller.makeCardPayment(price, creditCard);
 
         controller.openDoor();
         controller.closeDoor();
@@ -59,15 +79,29 @@ public class View {
     private void doHardcodedCashShit() {
         controller.nextCustomer();
         controller.closeDoor();
-        double price = controller.enterRegNumber("abc 123");
-        controller.makeCashPayment(100, price);
+        double price = 0;
+        try {
+            price = controller.enterRegNumber("abc 123");
+        } catch (IllegalLicenseNumberFormatException e) {
+            e.printStackTrace();
+        } catch (IllegalLicenseNumberException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println();
 
         Inspection inspection;
         while ((inspection = controller.nextInspection()) != null) {
             System.out.println("Next inspection:\n" + inspection);
             inspection.setPassed(true);
             System.out.println("->Set passed: " + inspection.isPassed() + "\n");
-            controller.enterInspectionResult(inspection);
+            try {
+                controller.enterInspectionResult(inspection);
+            } catch (IllegalLicenseNumberException e) {
+                e.printStackTrace();
+            } catch (IllegalLicenseNumberFormatException e) {
+                e.printStackTrace();
+            }
         }
 
         System.out.println();
@@ -76,6 +110,8 @@ public class View {
         while ((inspection = controller.nextInspection()) != null) {
             System.out.println(inspection + "\n");
         }
+
+        controller.makeCashPayment(100, price);
 
         controller.openDoor();
         controller.closeDoor();

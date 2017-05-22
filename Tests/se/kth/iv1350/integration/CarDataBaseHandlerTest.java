@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import se.kth.iv1350.dto.VehicleDTO;
+import se.kth.iv1350.model.IllegalLicenseNumberException;
+import se.kth.iv1350.model.IllegalLicenseNumberFormatException;
 import se.kth.iv1350.model.Inspection;
 
 import static org.junit.Assert.*;
@@ -25,15 +27,16 @@ public class CarDataBaseHandlerTest {
         carDataBaseHandler = null;
     }
 
-    /*
-    new Inspection("Brakes", 30, dummyVehicle),
-            new Inspection("Engine", 50, dummyVehicle),yVyV
-            new Inspection("Lights", 10, dummyVehicle)
-     */
-
     @Test
     public void testGetInspectionsByVehicle() {
-        Inspection[] inspections = carDataBaseHandler.getInspectionsByVehicle(null);
+        Inspection[] inspections = new Inspection[0];
+        try {
+            inspections = carDataBaseHandler.getInspectionsByVehicle(null);
+        } catch (IllegalLicenseNumberException e) {
+            e.printStackTrace();
+        } catch (IllegalLicenseNumberFormatException e) {
+            e.printStackTrace();
+        }
 
         boolean expected = true;
         boolean calculated = inspections[0].equals(new Inspection("Brakes", 30, new VehicleDTO("abc 123")));
@@ -70,7 +73,14 @@ public class CarDataBaseHandlerTest {
         Inspection inspectionToSave = new Inspection("engine", 40, dummyVehicle);
         inspectionToSave.setPassed(true);
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
-        Inspection[] fetchedInspections = carDataBaseHandler.getInspectionsByVehicle(dummyVehicle);
+        Inspection[] fetchedInspections = new Inspection[0];
+        try {
+            fetchedInspections = carDataBaseHandler.getInspectionsByVehicle(dummyVehicle);
+        } catch (IllegalLicenseNumberException e) {
+            e.printStackTrace();
+        } catch (IllegalLicenseNumberFormatException e) {
+            e.printStackTrace();
+        }
         boolean expected = false;
         boolean calculated = fetchedInspections[0].isPassed();
         assertEquals("An non-existing inspection wrongfully managed to be saved as a result in the database",

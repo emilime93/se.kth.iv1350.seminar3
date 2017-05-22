@@ -47,17 +47,9 @@ public class Controller {
         garage.openDoor();
     }
 
-    /**
-     * Fetches the inspections for a specified vehicle and calculates the cost
-     * @param regNo The registration number for the vehicle
-     * @return The cost for all the inspections of the vehicle
-     */
-    public double enterRegNumber(String regNo) {
-        VehicleDTO vehicle = new VehicleDTO(regNo);
-        Inspection[] inspections = this.carDataBaseHandler.getInspectionsByVehicle(vehicle);
-        this.inspectionHandler.setInspectionList(inspections);
-        double cost = inspectionHandler.calculateCost();
-        return cost;
+    public double enterRegNumber(String regNo) throws IllegalLicenseNumberFormatException,
+            IllegalLicenseNumberException {
+        return inspectionHandler.enterRegNumber(regNo);
     }
 
     /**
@@ -98,7 +90,8 @@ public class Controller {
      * Saves the inspection result from an edited inspection
      * @param inspection The edited inspection to save to the original
      */
-    public void enterInspectionResult(Inspection inspection) {
+    public void enterInspectionResult(Inspection inspection) throws IllegalLicenseNumberException,
+            IllegalLicenseNumberFormatException{
         inspectionHandler.saveInspectionResult(inspection);
     }
 
