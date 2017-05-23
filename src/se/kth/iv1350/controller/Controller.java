@@ -56,6 +56,15 @@ public class Controller {
         garage.openDoor();
     }
 
+    /**
+     * This method looks up the inspections for the specified vehicle and calculates the cost of the
+     * @param regNo The registration number to check for inspections.
+     * @return The price for the inspection.
+     * @throws IllegalLicenseNumberFormatException If the specified vehicle has a wrongfully formatted registration
+     * number, this exception is thrown.
+     * @throws IllegalLicenseNumberException If there's no inspections to be made for the specified vehicle
+     * this exception is thrown.
+     */
     public double enterRegNumber(String regNo) throws IllegalLicenseNumberFormatException,
             IllegalLicenseNumberException {
         return inspectionHandler.enterRegNumber(regNo);
@@ -100,15 +109,7 @@ public class Controller {
      * @param inspection The edited inspection to save to the original
      */
     public void enterInspectionResult(Inspection inspection) {
-        try {
-            inspectionHandler.saveInspectionResult(inspection);
-        } catch (IllegalLicenseNumberFormatException e) {
-            logException(e);
-            e.printStackTrace();
-        } catch (IllegalLicenseNumberException e) {
-            logException(e);
-            e.printStackTrace();
-        }
+        inspectionHandler.saveInspectionResult(inspection);
     }
 
     public void logException(Throwable logDetails) {

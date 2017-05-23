@@ -10,7 +10,7 @@ import java.util.Date;
 
 
 /**
- * Created by Emil on 2017-04-27.
+ * This is a dummy view for the car inspection program. All input is hard-coded at this stage.
  */
 public class View {
 

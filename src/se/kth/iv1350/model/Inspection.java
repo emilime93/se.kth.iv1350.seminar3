@@ -77,7 +77,7 @@ public class Inspection {
      * Gets the inspection cost
      * @return The cost of the inspection
      */
-    public int getInspectionCost() {
+    int getInspectionCost() {
         return inspectionCost;
     }
 
@@ -85,7 +85,7 @@ public class Inspection {
      * Returns the description of the inspection
      * @return The description of the inspection
      */
-    public String getInspectionDescription() {
+    private String getInspectionDescription() {
         return inspectionDescription;
     }
 }

@@ -8,7 +8,7 @@ import se.kth.iv1350.dto.VehicleDTO;
 import static org.junit.Assert.*;
 
 /**
- * Created by Emil on 2017-05-01.
+ * Test class for InspectionList
  */
 public class InspectionListTest {
 

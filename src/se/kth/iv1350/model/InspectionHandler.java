@@ -40,14 +40,17 @@ public class InspectionHandler {
      * Fetches the inspections for a specified vehicle and calculates the cost
      * @param regNo The registration number for the vehicle
      * @return The cost for all the inspections of the vehicle
+     * @throws IllegalLicenseNumberFormatException If the specified vehicle has a wrongfully formatted registration
+     * number, this exception is thrown.
+     * @throws IllegalLicenseNumberException If there's no inspections to be made for the specified vehicle
+     * this exception is thrown.
      */
     public double enterRegNumber(String regNo) throws IllegalLicenseNumberFormatException,
             IllegalLicenseNumberException {
         VehicleDTO vehicle = new VehicleDTO(regNo);
         Inspection[] inspections = this.carDataBaseHandler.getInspectionsByVehicle(vehicle);
         setInspectionList(inspections);
-        double cost = calculateCost();
-        return cost;
+        return calculateCost();
     }
 
     /**
@@ -71,8 +74,7 @@ public class InspectionHandler {
      * Saves the inspection result in the database and fetches the newly updated database to the local list
      * @param inspectionToSave The inspection, with correct result, to save
      */
-    public void saveInspectionResult(Inspection inspectionToSave) throws IllegalLicenseNumberFormatException,
-            IllegalLicenseNumberException {
+    public void saveInspectionResult(Inspection inspectionToSave) {
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
         inspectionList.updateCurrentList(inspectionList.getInspectionsArray());
     }
