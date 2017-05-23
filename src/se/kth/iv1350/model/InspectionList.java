@@ -44,10 +44,20 @@ public class InspectionList {
         try {
             return this.inspections[this.currentIndex++];
         } catch (Exception e) {
-//            System.out.println(e);
-            this.currentIndex = 0;
             return null;
         }
+    }
+
+    /**
+     * Returns the inspection list in an primitive array format.
+     * @return The array of inspections
+     */
+    Inspection[] getInspectionsArray() {
+        Inspection[] inspections = new Inspection[numberOfInspections];
+        for (int i = 0; i < inspections.length; i++) {
+            inspections[i] = this.inspections[i];
+        }
+        return inspections;
     }
 
     /**

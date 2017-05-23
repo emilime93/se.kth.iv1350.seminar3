@@ -12,6 +12,7 @@ public class CarDataBaseHandler {
 
     private Inspection[] dataBaseInspections;
 
+    // License numbers that has inspections.
     private final static String[] LEGAL_LICENSE_NUMBERS = {"ABC 123", "XYZ 789", "AAA 111"};
 
     /**
@@ -31,7 +32,10 @@ public class CarDataBaseHandler {
     /**
      * In this version this function returns the dummy inspections from the dummy database.
      * @param vehicle The vehicle to search inspections by
-     * @return Dummy inspection list
+     * @return The dummy inspection list
+     * @throws IllegalLicenseNumberException If there's no inspection for the specified vehicle,
+     * this exception is thrown.
+     * @throws IllegalLicenseNumberFormatException If the registration number format if wrong, this exception is thrown.
      */
     public Inspection[] getInspectionsByVehicle(VehicleDTO vehicle) throws IllegalLicenseNumberException,
             IllegalLicenseNumberFormatException {
@@ -47,7 +51,7 @@ public class CarDataBaseHandler {
                 return this.dataBaseInspections;
             }
         }
-        throw new IllegalLicenseNumberException("The entered licence number has no");
+        throw new IllegalLicenseNumberException("The entered licence number has no inspections associated with it.");
     }
 
     /**

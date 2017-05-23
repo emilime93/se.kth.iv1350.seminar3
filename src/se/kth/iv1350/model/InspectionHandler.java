@@ -71,11 +71,10 @@ public class InspectionHandler {
      * Saves the inspection result in the database and fetches the newly updated database to the local list
      * @param inspectionToSave The inspection, with correct result, to save
      */
-    public void saveInspectionResult(Inspection inspectionToSave) throws IllegalLicenseNumberException,
-            IllegalLicenseNumberFormatException {
+    public void saveInspectionResult(Inspection inspectionToSave) throws IllegalLicenseNumberFormatException,
+            IllegalLicenseNumberException {
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
-        VehicleDTO dummyVehicle = new VehicleDTO("ABC 123");
-        inspectionList.updateCurrentList(carDataBaseHandler.getInspectionsByVehicle(dummyVehicle));
+        inspectionList.updateCurrentList(inspectionList.getInspectionsArray());
     }
 
     /**

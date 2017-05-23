@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class LogHandler {
 
-    private final static String FILE_NAME = "exception-log.txt";
+    private final static String FILE_NAME = "exception-logException.txt";
 
     private PrintWriter printWriter;
 
@@ -25,5 +25,6 @@ public class LogHandler {
         sb.append("-Details: ");
         sb.append(exception.getMessage());
         printWriter.println(sb);
+        exception.printStackTrace(printWriter);
     }
 }

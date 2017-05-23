@@ -5,6 +5,8 @@ import se.kth.iv1350.dto.VehicleDTO;
 import se.kth.iv1350.integration.CarDataBaseHandler;
 import se.kth.iv1350.model.*;
 
+import java.io.IOException;
+
 /**
  * Created by Emil on 2017-04-27.
  */
@@ -13,6 +15,7 @@ public class Controller {
     private Garage garage;
     private CarDataBaseHandler carDataBaseHandler;
     private InspectionHandler inspectionHandler;
+    private LogHandler logHandler;
 
     /**
      * Creates a Controller between the View and the Models
@@ -24,6 +27,12 @@ public class Controller {
         this.garage = garage;
         this.carDataBaseHandler = carDataBaseHandler;
         this.inspectionHandler = inspectionHandler;
+
+        try {
+            this.logHandler = new LogHandler();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -90,9 +99,19 @@ public class Controller {
      * Saves the inspection result from an edited inspection
      * @param inspection The edited inspection to save to the original
      */
-    public void enterInspectionResult(Inspection inspection) throws IllegalLicenseNumberException,
-            IllegalLicenseNumberFormatException{
-        inspectionHandler.saveInspectionResult(inspection);
+    public void enterInspectionResult(Inspection inspection) {
+        try {
+            inspectionHandler.saveInspectionResult(inspection);
+        } catch (IllegalLicenseNumberFormatException e) {
+            logException(e);
+            e.printStackTrace();
+        } catch (IllegalLicenseNumberException e) {
+            logException(e);
+            e.printStackTrace();
+        }
     }
 
+    public void logException(Throwable logDetails) {
+        logHandler.logException(logDetails);
+    }
 }

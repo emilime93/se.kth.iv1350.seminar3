@@ -32,41 +32,44 @@ public class View {
         controller.nextCustomer();
         controller.closeDoor();
         double price = 0;
+        String licenseNumber = "abc 124";
+
         try {
-            price = controller.enterRegNumber("abc 123");
+            price = controller.enterRegNumber(licenseNumber);
         } catch (IllegalLicenseNumberException illegalLicenseNumber) {
-            System.out.println();
+            System.out.println("Error: This license number does not have any inspections associated with it.");
+            controller.logException(illegalLicenseNumber);
         } catch (IllegalLicenseNumberFormatException illegalFormat) {
-
+            controller.logException(illegalFormat);
+            System.out.println("Error: Wrong licence number format. \n" + illegalFormat.getMessage());
+            controller.logException(illegalFormat);
         } catch (Exception e) {
-
+            controller.logException(e);
+            System.out.println("Error: Unknown error. Try again or contact your IT guy.");
         }
 
         System.out.println();
 
         Inspection inspection;
+
         while ((inspection = controller.nextInspection()) != null) {
             System.out.println("Next inspection:\n" + inspection);
             inspection.setPassed(true);
             System.out.println("->Set passed: " + inspection.isPassed() + "\n");
-            try {
-                controller.enterInspectionResult(inspection);
-            } catch (IllegalLicenseNumberException e) {
-                e.printStackTrace();
-            } catch (IllegalLicenseNumberFormatException e) {
-                e.printStackTrace();
-            }
+            controller.enterInspectionResult(inspection);
         }
+
 
         System.out.println();
 
-        System.out.println("---Updated database after inspections:");
         while ((inspection = controller.nextInspection()) != null) {
-            System.out.println(inspection + "\n");
+            System.out.println("Updated inspection:\n" + inspection + "\n");
         }
 
-        CreditCardDTO creditCard = new CreditCardDTO("Memi Hiho Bant", "1337 420", "666", new Date());
-        controller.makeCardPayment(price, creditCard);
+        if (price < 0) {
+            CreditCardDTO creditCard = new CreditCardDTO("Memi Hiho Bant", "1337 420", "666", new Date());
+            controller.makeCardPayment(price, creditCard);
+        }
 
         controller.openDoor();
         controller.closeDoor();
@@ -76,6 +79,7 @@ public class View {
     /**
      * Hardcoded input from view to do a Cash Payment
      */
+    /**
     private void doHardcodedCashShit() {
         controller.nextCustomer();
         controller.closeDoor();
@@ -95,13 +99,7 @@ public class View {
             System.out.println("Next inspection:\n" + inspection);
             inspection.setPassed(true);
             System.out.println("->Set passed: " + inspection.isPassed() + "\n");
-            try {
-                controller.enterInspectionResult(inspection);
-            } catch (IllegalLicenseNumberException e) {
-                e.printStackTrace();
-            } catch (IllegalLicenseNumberFormatException e) {
-                e.printStackTrace();
-            }
+            controller.enterInspectionResult(inspection);
         }
 
         System.out.println();
@@ -116,4 +114,5 @@ public class View {
         controller.openDoor();
         controller.closeDoor();
     }
+     */
 }
