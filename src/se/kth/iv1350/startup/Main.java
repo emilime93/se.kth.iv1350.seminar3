@@ -4,6 +4,7 @@ import se.kth.iv1350.controller.Controller;
 import se.kth.iv1350.integration.CarDataBaseHandler;
 import se.kth.iv1350.model.Garage;
 import se.kth.iv1350.model.InspectionHandler;
+import se.kth.iv1350.view.InspectionsStatsView;
 import se.kth.iv1350.view.View;
 
 public class Main {
@@ -13,6 +14,7 @@ public class Main {
         CarDataBaseHandler carDataBaseHandler = new CarDataBaseHandler();
         InspectionHandler inspectionHandler = new InspectionHandler(carDataBaseHandler);
         Controller controller = new Controller(garage, carDataBaseHandler, inspectionHandler);
+        new InspectionsStatsView(controller);
         new View(controller);
     }
 }

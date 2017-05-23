@@ -4,6 +4,7 @@ import se.kth.iv1350.dto.CreditCardDTO;
 import se.kth.iv1350.dto.VehicleDTO;
 import se.kth.iv1350.integration.CarDataBaseHandler;
 import se.kth.iv1350.model.*;
+import se.kth.iv1350.view.InspectionsStatsView;
 
 import java.io.IOException;
 
@@ -114,5 +115,9 @@ public class Controller {
 
     public void logException(Throwable logDetails) {
         logHandler.logException(logDetails);
+    }
+
+    public void setInspectionResultsObserver(InspectionsStatsView inspectionsStatsView) {
+        inspectionHandler.setInspectionResultsObserver(inspectionsStatsView);
     }
 }

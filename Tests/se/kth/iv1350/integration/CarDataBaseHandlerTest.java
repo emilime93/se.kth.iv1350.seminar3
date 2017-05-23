@@ -31,7 +31,8 @@ public class CarDataBaseHandlerTest {
     public void testGetInspectionsByVehicle() {
         Inspection[] inspections = new Inspection[0];
         try {
-            inspections = carDataBaseHandler.getInspectionsByVehicle(null);
+            VehicleDTO vehicle = new VehicleDTO("ABC 123");
+            inspections = carDataBaseHandler.getInspectionsByVehicle(vehicle);
         } catch (IllegalLicenseNumberException e) {
             e.printStackTrace();
         } catch (IllegalLicenseNumberFormatException e) {

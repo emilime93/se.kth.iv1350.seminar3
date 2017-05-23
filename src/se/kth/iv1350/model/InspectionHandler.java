@@ -2,6 +2,7 @@ package se.kth.iv1350.model;
 
 import se.kth.iv1350.dto.VehicleDTO;
 import se.kth.iv1350.integration.CarDataBaseHandler;
+import se.kth.iv1350.view.InspectionsStatsView;
 
 /**
  * Created by Emil on 2017-04-27.
@@ -10,6 +11,7 @@ public class InspectionHandler {
 
     private InspectionList inspectionList;
     private CarDataBaseHandler carDataBaseHandler;
+    private InspectionsStatsView inspectionResultsObserver;
 
     /**
      * Creates an inspection handler. Responsible for handeling the list with inspections and the different actions
@@ -50,7 +52,8 @@ public class InspectionHandler {
         VehicleDTO vehicle = new VehicleDTO(regNo);
         Inspection[] inspections = this.carDataBaseHandler.getInspectionsByVehicle(vehicle);
         setInspectionList(inspections);
-        return calculateCost();
+        double cost = calculateCost();
+        return cost;
     }
 
     /**
@@ -75,6 +78,7 @@ public class InspectionHandler {
      * @param inspectionToSave The inspection, with correct result, to save
      */
     public void saveInspectionResult(Inspection inspectionToSave) {
+        inspectionResultsObserver.newInspectionResultSet(inspectionToSave.isPassed());
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
         inspectionList.updateCurrentList(inspectionList.getInspectionsArray());
     }
@@ -85,5 +89,9 @@ public class InspectionHandler {
      */
     public void setInspectionList(Inspection[] inspectionList) {
         this.inspectionList.setInspections(inspectionList);
+    }
+
+    public void setInspectionResultsObserver(InspectionsStatsView inspectionResultsObserver) {
+        this.inspectionResultsObserver = inspectionResultsObserver;
     }
 }

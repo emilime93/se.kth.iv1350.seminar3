@@ -32,7 +32,7 @@ public class View {
         controller.nextCustomer();
         controller.closeDoor();
         double price = 0;
-        String licenseNumber = "abc 124";
+        String licenseNumber = "abc 123";
 
         try {
             price = controller.enterRegNumber(licenseNumber);
