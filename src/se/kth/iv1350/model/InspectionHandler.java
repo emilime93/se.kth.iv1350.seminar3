@@ -5,7 +5,7 @@ import se.kth.iv1350.integration.CarDataBaseHandler;
 import se.kth.iv1350.view.InspectionsStatsView;
 
 /**
- * Created by Emil on 2017-04-27.
+ * A handler that handles a list of inspections. Everything from updating the list and saving data to it.
  */
 public class InspectionHandler {
 

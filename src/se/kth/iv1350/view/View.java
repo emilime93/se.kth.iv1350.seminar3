@@ -32,7 +32,7 @@ public class View {
         controller.nextCustomer();
         controller.closeDoor();
         double price = 0;
-        String licenseNumber = "abc 123";
+        String licenseNumber = "abc a123";
 
         try {
             price = controller.enterRegNumber(licenseNumber);
@@ -42,7 +42,6 @@ public class View {
         } catch (IllegalLicenseNumberFormatException illegalFormat) {
             controller.logException(illegalFormat);
             System.out.println("Error: Wrong licence number format. \n" + illegalFormat.getMessage());
-            controller.logException(illegalFormat);
         } catch (Exception e) {
             controller.logException(e);
             System.out.println("Error: Unknown error. Try again or contact your IT guy.");
@@ -79,7 +78,6 @@ public class View {
     /**
      * Hardcoded input from view to do a Cash Payment
      */
-    /**
     private void doHardcodedCashShit() {
         controller.nextCustomer();
         controller.closeDoor();
@@ -114,5 +112,4 @@ public class View {
         controller.openDoor();
         controller.closeDoor();
     }
-     */
 }
