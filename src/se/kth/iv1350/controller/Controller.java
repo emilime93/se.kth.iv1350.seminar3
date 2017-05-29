@@ -14,19 +14,16 @@ import java.io.IOException;
 public class Controller {
 
     private Garage garage;
-    private CarDataBaseHandler carDataBaseHandler;
     private InspectionHandler inspectionHandler;
     private LogHandler logHandler;
 
     /**
      * Creates a Controller between the View and the Models
      * @param garage The garage to use
-     * @param carDataBaseHandler The car database to use
      * @param inspectionHandler The inspection handler to use
      */
-    public Controller(Garage garage, CarDataBaseHandler carDataBaseHandler, InspectionHandler inspectionHandler) {
+    public Controller(Garage garage, InspectionHandler inspectionHandler) {
         this.garage = garage;
-        this.carDataBaseHandler = carDataBaseHandler;
         this.inspectionHandler = inspectionHandler;
 
         try {

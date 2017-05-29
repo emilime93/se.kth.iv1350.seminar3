@@ -23,7 +23,7 @@ public class ControllerTest {
         Garage garage = new Garage();
         CarDataBaseHandler carDataBaseHandler = new CarDataBaseHandler();
         InspectionHandler inspectionHandler = new InspectionHandler(carDataBaseHandler);
-        this.controller = new Controller(garage, carDataBaseHandler, inspectionHandler);
+        this.controller = new Controller(garage, inspectionHandler);
         this.controller.enterRegNumber("abc 123"); //here the database is fetched
     }
 

@@ -78,7 +78,7 @@ public class InspectionHandler {
      * @param inspectionToSave The inspection, with correct result, to save
      */
     public void saveInspectionResult(Inspection inspectionToSave) {
-        inspectionResultsObserver.newInspectionResultSet(inspectionToSave.isPassed());
+        inspectionResultsObserver.newInspectionResult(inspectionToSave.isPassed());
         carDataBaseHandler.saveInspectionResult(inspectionToSave);
         inspectionList.updateCurrentList(inspectionList.getInspectionsArray());
     }

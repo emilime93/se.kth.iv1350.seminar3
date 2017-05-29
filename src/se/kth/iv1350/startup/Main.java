@@ -13,7 +13,7 @@ public class Main {
         Garage garage = new Garage();
         CarDataBaseHandler carDataBaseHandler = new CarDataBaseHandler();
         InspectionHandler inspectionHandler = new InspectionHandler(carDataBaseHandler);
-        Controller controller = new Controller(garage, carDataBaseHandler, inspectionHandler);
+        Controller controller = new Controller(garage, inspectionHandler);
         new InspectionsStatsView(controller);
         new View(controller);
     }

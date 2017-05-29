@@ -1,12 +1,12 @@
 package se.kth.iv1350.view;
 
 import se.kth.iv1350.controller.Controller;
-import se.kth.iv1350.model.NewInspectionResults;
+import se.kth.iv1350.model.InspectionResultObserver;
 
 /**
  * A view responsible for tracking passed and failed inspections. And printing the corresponding stats.
  */
-public class InspectionsStatsView implements NewInspectionResults {
+public class InspectionsStatsView implements InspectionResultObserver {
 
     private final Controller controller;
     private int noOfPassedInspections = 0;
@@ -22,7 +22,7 @@ public class InspectionsStatsView implements NewInspectionResults {
      * @param inspectionIsPassed Whenever the new inspection result was passed or not.
      */
     @Override
-    public void newInspectionResultSet(boolean inspectionIsPassed) {
+    public void newInspectionResult(boolean inspectionIsPassed) {
         if (inspectionIsPassed) {
             noOfPassedInspections++;
         } else {
