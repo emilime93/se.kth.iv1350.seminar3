@@ -54,7 +54,7 @@ public class View {
 
         while ((inspection = controller.nextInspection()) != null) {
             System.out.println("Next inspection:\n" + inspection);
-            inspection.setPassed(false);
+            inspection.setPassed(true);
             System.out.println("->Set passed: " + inspection.isPassed() + "\n");
             controller.enterInspectionResult(inspection);
         }

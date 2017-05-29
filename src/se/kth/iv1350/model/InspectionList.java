@@ -7,8 +7,8 @@ public class InspectionList {
 
     private Inspection[] inspections;
 
-    private int currentIndex = 0;
-    private int numberOfInspections = 0;
+    private int currentIndex;
+    private int numberOfInspections;
 
     /**
      * Sets the list of inspection to use and initializes the iterator
@@ -44,6 +44,7 @@ public class InspectionList {
         try {
             return this.inspections[this.currentIndex++];
         } catch (Exception e) {
+            resetIterator();
             return null;
         }
     }

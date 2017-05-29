@@ -14,7 +14,7 @@ public class InspectionHandler {
     private InspectionsStatsView inspectionResultsObserver;
 
     /**
-     * Creates an inspection handler. Responsible for handeling the list with inspections and the different actions
+     * Creates an inspection handler. Responsible for handling the list with inspections and the different actions
      * related to the inspections.
      * @param carDataBaseHandler The car data base handler to use to fetch and save results from
      */
