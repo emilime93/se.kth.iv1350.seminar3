@@ -1,7 +1,7 @@
 package se.kth.iv1350.model;
 
 /**
- * Created by Emil on 2017-05-22.
+ * An exception for when the entered license number isn't found by the system for some reason.
  */
 public class IllegalLicenseNumberException extends Exception {
 

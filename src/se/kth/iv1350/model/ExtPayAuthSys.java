@@ -1,7 +1,7 @@
 package se.kth.iv1350.model;
 
 /**
- * Created by Emil on 2017-04-27.
+ * A class representing a dummy External Payment Authorization System.
  */
 public class ExtPayAuthSys {
 

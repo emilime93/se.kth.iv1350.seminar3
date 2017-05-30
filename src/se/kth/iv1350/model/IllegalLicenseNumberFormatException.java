@@ -1,7 +1,7 @@
 package se.kth.iv1350.model;
 
 /**
- * Created by Emil on 2017-05-22.
+ * An exception for when the user enters a license number using the wrong formatt
  */
 public class IllegalLicenseNumberFormatException extends Exception {
 

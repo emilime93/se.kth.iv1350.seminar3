@@ -5,5 +5,9 @@ package se.kth.iv1350.model;
  */
 public interface InspectionResultObserver {
 
+    /**
+     * This method reports that a new inspection result has been saved.
+     * @param inspectionIsPassed Whether the inspection in question passed or not.
+     */
     void newInspectionResult(boolean inspectionIsPassed);
 }

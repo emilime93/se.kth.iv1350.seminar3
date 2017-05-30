@@ -9,7 +9,7 @@ import se.kth.iv1350.view.InspectionsStatsView;
 import java.io.IOException;
 
 /**
- * Created by Emil on 2017-04-27.
+ * The controller, responsible for communication from view to model layer.
  */
 public class Controller {
 
@@ -110,6 +110,10 @@ public class Controller {
         inspectionHandler.saveInspectionResult(inspection);
     }
 
+    /**
+     * Logs the exception with the current logging method.
+     * @param logDetails The exception to be logged.
+     */
     public void logException(Throwable logDetails) {
         logHandler.logException(logDetails);
     }

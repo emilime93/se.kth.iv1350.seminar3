@@ -34,7 +34,7 @@ public class InspectionsStatsView implements InspectionResultObserver {
     /**
      * Prints the total amount of passed and failed inspections.
      */
-    public void printStats() {
+    private void printStats() {
         System.out.printf("STATS:\nNumber of passed inspections: %d\nNumber of failed inspections: %d\n\n",noOfPassedInspections
         , noOfFailedInspections);
     }
