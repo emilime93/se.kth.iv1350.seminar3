@@ -37,8 +37,8 @@ public class View {
         try {
             price = controller.enterRegNumber(licenseNumber);
         } catch (IllegalLicenseNumberException illegalLicenseNumber) {
-            System.out.println("Error: This license number does not have any inspections associated with it.");
             controller.logException(illegalLicenseNumber);
+            System.out.println("Error: This license number does not have any inspections associated with it.");
         } catch (IllegalLicenseNumberFormatException illegalFormat) {
             controller.logException(illegalFormat);
             System.out.println("Error: Wrong licence number format. \n" + illegalFormat.getMessage());
